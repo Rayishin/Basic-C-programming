@@ -21,7 +21,7 @@ int main()
             break;
         }
 
-        switch (static_cast<months>(number)) // явное преобразование int -> enum
+        switch (static_cast<months>(number)) 
         {
         case january:
             std::cout << "January" << std::endl;
