@@ -132,6 +132,7 @@
     <ClCompile Include="Task 1.cpp" />
     <ClCompile Include="Task 2.cpp" />
     <ClCompile Include="Task 3.cpp" />
+    <ClCompile Include="Two number calculator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
