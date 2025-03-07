@@ -77,21 +77,22 @@ int main()
 		std::cout << "Enter num2: ";
 		std::cin >> num2;
 
-		Calculator calc(num1, num2);
-
-		if (!calc.set_num1(num1) || !calc.set_num2(num2))
+		if (num1 == 0 || num2 == 0)
 		{
 			std::cout << "Invalid input! ";
 			continue;
 		}
-
-		std::cout << "num1 + num2 = " << calc.add() << std::endl;
-		std::cout << "num1 - num2 = " << calc.subtract_2_1() << std::endl;
-		std::cout << "num2 - num1 = " << calc.subtract_1_2() << std::endl;
-		std::cout << "num1 * num2 = " << calc.multiply() << std::endl;
-		std::cout << "num1 / num2 = " << calc.divide_1_2() << std::endl;
-		std::cout << "num2 / num1 = " << calc.divide_2_1() << std::endl;
+		break;
 	}
+
+	Calculator calc(num1, num2);
+
+	std::cout << "num1 + num2 = " << calc.add() << std::endl;
+	std::cout << "num1 - num2 = " << calc.subtract_2_1() << std::endl;
+	std::cout << "num2 - num1 = " << calc.subtract_1_2() << std::endl;
+	std::cout << "num1 * num2 = " << calc.multiply() << std::endl;
+	std::cout << "num1 / num2 = " << calc.divide_1_2() << std::endl;
+	std::cout << "num2 / num1 = " << calc.divide_2_1() << std::endl;
 
 	return EXIT_SUCCESS;
 }
