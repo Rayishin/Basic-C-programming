@@ -8,6 +8,7 @@ private:
 	double num2;
 
 public:
+	Calculator() : num1(1), num2(1) {}
 
 	Calculator(double setNum1, double setNum2) : num1{ setNum1 }, num2{ setNum2 } {}
 
@@ -67,25 +68,28 @@ public:
 
 int main()
 {
+	Calculator calc;
+
 	double num1, num2;
+	bool set;
 
-	while (true)
+	do
 	{
-		std::cout << "Enter num1: ";
+		std::cout << "Enter the num1: ";
 		std::cin >> num1;
+		set = calc.set_num1(num1);
+		if (!set) std::cout << "Error!\n";
+	} 
+	while (!set);
 
-		std::cout << "Enter num2: ";
+	do 
+	{
+		std::cout << "Enter the num2: ";
 		std::cin >> num2;
-
-		if (num1 == 0 || num2 == 0)
-		{
-			std::cout << "Invalid input! ";
-			continue;
-		}
-		break;
-	}
-
-	Calculator calc(num1, num2);
+		set = calc.set_num2(num2);
+		if (!set) std::cout << "Error!\n";
+	} 
+	while (!set);
 
 	std::cout << "num1 + num2 = " << calc.add() << std::endl;
 	std::cout << "num1 - num2 = " << calc.subtract_2_1() << std::endl;
